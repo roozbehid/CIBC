@@ -17,29 +17,28 @@ public:
 		typename vector<MyData>::iterator cursor;
 		typename vector<MyData>::iterator begin;
 		typename vector<MyData>::iterator end;
-		bool full_iteration;
+		int iterations;
 	public:
-		iterator(typename vector<MyData>::iterator begin_, typename vector<MyData>::iterator end_, typename vector<MyData>::iterator cursor_, bool fi) { 
+		iterator(typename vector<MyData>::iterator begin_, typename vector<MyData>::iterator end_, typename vector<MyData>::iterator cursor_, int it) { 
 			begin = begin_;
 			end = end_;
 			cursor = cursor_;
-			full_iteration = fi;
+			iterations = it;
 		}
 		iterator operator++() { 
 			++cursor; 
+			++iterations;
 			if (cursor == end)
-			{
 				cursor = begin;
-				full_iteration = true;
-			}
+
 			return *this; 
 		}
 
 		bool operator!=(const iterator &other) const { 
-			if ((full_iteration) && (other.cursor == end) && (cursor == begin))
-				return false;
+			if (other.cursor == end)
+				return iterations != other.iterations;
 
-			return other.cursor != cursor;
+			return other.cursor != cursor || iterations != other.iterations;
 		}
 
 		MyData& operator*() const { return *cursor; }
@@ -48,15 +47,15 @@ public:
 
 	iterator begin() { 
 
-		return  iterator(v.begin(),v.end(),v.begin() + rotation % v.size(), false);
+		return  iterator(v.begin(),v.end(), v.begin() + rotation % v.size(), 0);
 	}
 
 	iterator end()    { 
 		int rot_corrected = rotation % v.size();
 		if (rot_corrected != 0)
-			return  iterator(v.begin(), v.end(), v.end() -  (v.size() + 1 - rot_corrected), true);
+			return  iterator(v.begin(), v.end(), v.end() -  (v.size()  - rot_corrected), v.size());
 		else
-			return  iterator(v.begin(), v.end(), v.end(), true );
+			return  iterator(v.begin(), v.end(), v.end(), v.size());
 	}
 
 	const MyData& operator[](int index) const {
