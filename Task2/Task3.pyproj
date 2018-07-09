@@ -3,13 +3,14 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>7c7d5a6d-8585-4e7c-b3be-a2d2d5189b6e</ProjectGuid>
-    <ProjectHome>.</ProjectHome>
-    <StartupFile>Task2.py</StartupFile>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>Task3.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>Task2</Name>
+    <Name>Task3</Name>
     <RootNamespace>Task2</RootNamespace>
     <LaunchProvider>Standard Python launcher</LaunchProvider>
     <CommandLineArguments>.\Data\diff_test\test_image_1.png .\Data\diff_test\test_image_2.png</CommandLineArguments>
@@ -24,7 +25,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Task2.py" />
+    <Compile Include="Task3.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

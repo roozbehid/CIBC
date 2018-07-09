@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Task1", "Task1\Task1.vcxproj", "{7EB55BD6-BD0E-48FC-B34F-1316623D25AA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Task2", "Task1\Task1.vcxproj", "{7EB55BD6-BD0E-48FC-B34F-1316623D25AA}"
 EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Task2", "Task2\Task2.pyproj", "{7C7D5A6D-8585-4E7C-B3BE-A2D2D5189B6E}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Task3", "Task2\Task3.pyproj", "{7C7D5A6D-8585-4E7C-B3BE-A2D2D5189B6E}"
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "BTask1", "BTask1\BTask1.pyproj", "{46775C7D-FBF5-4999-85A3-86B7FFFF60D5}"
 EndProject
