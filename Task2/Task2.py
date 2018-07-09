@@ -1,3 +1,4 @@
+# ref : https://www.pyimagesearch.com/2014/09/15/python-compare-two-images/
 import cv2
 import sys
 from skimage.measure import compare_ssim, compare_nrmse
